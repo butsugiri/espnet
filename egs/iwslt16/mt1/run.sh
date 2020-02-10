@@ -73,7 +73,7 @@ if [ ${stage} -le 0 ] && [ ${stop_stage} -ge 0 ]; then
     ### Task dependent. You have to make data the following preparation part by yourself.
     ### But you can utilize Kaldi recipes in most cases
     echo "stage 0: Data Preparation"
-    local/data_prep.sh ${iwslt16} de
+    local/data_prep.sh ${iwslt16} ${src_lang} ${tgt_lang}
 fi
 
 if [ ${stage} -le 1 ] && [ ${stop_stage} -ge 1 ]; then
